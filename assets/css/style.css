@@ -54,7 +54,7 @@ a {
 .btn {
     min-width: 145px;
     height: 46px;
-    background-color: #F28123;
+    background-color: var(--primary-color);
     color: #fff;
     padding: 10px 20px;
     border-radius: 999px;
@@ -85,23 +85,30 @@ a {
     overflow: hidden;
 }
 
+.line-clamp.line-2{
+    --line-clamp: 2;
+}
+
 .slick-prev,
-.slick-next{
+.slick-next {
     display: none !important;
 }
 
 /* Header */
 .header {
-    background: #051922;
-    padding: 25px 70px;
-}
-
-.header.fixed {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 2;
+    background: transparent;
+    padding: 25px 70px;
+}
+
+.header.fixed {
+    background-color: #051922;
+    padding: 15px 0;
+    transition: .3s;
 }
 
 .header .body {
@@ -114,6 +121,7 @@ a {
     width: 150px;
     height: 43px;
     object-fit: cover;
+    margin-left: -41px;
 }
 
 .nav ul {
@@ -128,12 +136,13 @@ a {
     padding: 15px;
 }
 
-.header .action .icon:hover i{
+.header .action .icon:hover i {
     color: var(--primary-color);
 }
 
 .header .action {
     display: flex;
+    align-items: center;
 }
 
 .nav li:hover a,
@@ -142,9 +151,8 @@ a {
 }
 
 /* Search */
-.search-area {
-    display: none;
-}
+
+
 
 /* Hero */
 .hero {
@@ -227,6 +235,46 @@ a {
     background-color: var(--primary-color);
 }
 
+/* Hero-about */
+.hero-about{
+    padding: 150px 0;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    z-index: 1;
+    background-attachment: fixed;
+    padding-top: 200px;
+}
+
+.hero-about::after{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: #07212e;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.hero-about .hero-info .desc{
+    color: var(--primary-color);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+}
+
+.hero-about .hero-info .heading{
+    font-size: 5rem;
+    font-weight: 900;
+    color: #fff;
+    margin: 0;
+    margin-top: 20px;
+}
+
+
+
 /* Features */
 .features {
     padding: 80px 0;
@@ -270,6 +318,155 @@ a {
     opacity: 0.75;
 }
 
+/* Features-about */
+.features-about{
+    position: relative;
+    margin: 150px 0;
+}
+
+.features-about::after{
+    background-image: url(../img/hero-bg.jpeg);
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40%;
+    height: 100%;
+    content: "";
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 5px;
+    -webkit-box-shadow: 0 0 20px #cacaca;
+    box-shadow: 0 0 20px #cacaca;
+    border-bottom-left-radius: 5px;
+}
+
+.features-about .title{
+    margin-bottom: 32px;
+    color: #051922;
+    font-size: 4.2rem;
+    font-weight: 600;
+}
+
+.features-about .features-list {
+    flex-wrap: wrap;
+    justify-content: initial;
+    width: 665px;
+    gap: 40px;
+}
+
+.features-about .feature-item{
+    align-items: normal;
+}
+
+.features-about .content .desc{
+    width: 222px;
+    opacity: 0.75;
+    font-size: 1.4rem;
+    line-height: 1.7;
+}
+
+/* Team */
+.team{
+    margin: 150px 0;
+}
+
+.team .body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 80px;
+}
+
+.team .sub-heading{
+    font-size: 4rem;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.team .sub-heading::after{
+    position: absolute;
+    content: '';
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 50px;
+    height: 2px;
+    background-color: #F28123;
+    margin: 0 auto;
+}
+
+.team .body .desc{
+    font-size: 1.5rem;
+    width: 530px;
+    margin: 0 auto;
+    color: #555;
+    margin-top: 10px;
+    line-height: 1.8;
+}
+
+.team .team-list{
+    display: flex;
+    gap: 30px;
+}
+
+.team-list .team-item{
+    position: relative;
+    border-radius: 5px;
+}
+
+.team-list .team-item .thumb{
+    width: 350px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.team-item .info{
+    text-align: center;
+}
+
+.team-item .info .team-name{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.team-item .info .role{
+    font-size: 1.4rem;
+    display: block;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+.team-item .social-team{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    bottom: 80px;
+    left: 0;
+    right: 0;
+}
+
+.team-item .social-team li a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: var(--primary-color);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.team-item .social-team li:hover a{
+    color: #fff;
+    background-color: #051922;
+}
+
 /* Product */
 .product {
     padding: 150px 0;
@@ -310,67 +507,72 @@ a {
     text-align: center;
 }
 
-.row-desc {
+.product-list {
     display: flex;
-    justify-content: space-between;
     gap: 30px;
+    overflow: hidden;
 }
 
-.product-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px 0px, rgba(0, 0, 0, 0.07) 0px 2px 2px 0px, rgba(0, 0, 0, 0.07) 0px 4px 4px 0px, rgba(0, 0, 0, 0.07) 0px 8px 8px 0px, rgba(0, 0, 0, 0.07) 0px 16px 16px 0px;
+.product-list .item {
+    flex-shrink: 0;
+    width: calc(33.33% - 20px);
+    border: 1px solid #ebebee;
+    box-shadow: 0 0 20px #ebebee;
     padding-bottom: 50px;
-    border: 1px solid rgba(0, 0, 0, 0.09);
     border-radius: 5px;
+    transition: .3s;
 }
 
-.product .product-item:hover {
+.product-list .item:hover{
     box-shadow: none;
 }
 
-.product-img img {
-    width: 350px;
-    height: 350px;
+.product-list .item .thumb {
+    width: 100%;
+    height: 310px;
     object-fit: cover;
+    background: #FFFFFF;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
 
-.product-info {
-    text-align: center;
+.product-list .item .info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.product-info .product-title {
+.product-list .info .title a {
+    display: block;
     font-size: 2rem;
     font-weight: 600;
-    margin: 30px 0;
+    margin: 10px 0;
+    color: #051922;
 }
 
-.product-info .desc {
-    margin: 18px 0 25px;
+.product-list .info .category{
+    display: block;
     opacity: 0.8;
     font-size: 1.5rem;
 }
 
-.product-info .price {
+.product-list .info .price{
     font-size: 3rem;
     font-weight: 700;
-    margin-bottom: 25px;
+    margin: 15px 0;
 }
 
-.product-item .btn-cart {
+.product-list .info .btn-cart{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.3s;
 }
 
-.btn-cart i {
+.product-list .info .btn-cart i{
     margin-right: 5px;
 }
+
 
 /* Banner */
 .banner {
@@ -674,7 +876,7 @@ a {
     margin-right: 10px;
 }
 
-.discount .btn-cart{
+.discount .btn-cart {
     min-width: 128px;
 }
 
@@ -706,15 +908,18 @@ a {
 .news-list {
     display: flex;
     gap: 30px;
+    overflow: hidden;
 }
 
 .news-list .news-item {
+    flex-shrink: 0;
+    width: calc(33.33% - 20px);
     margin-bottom: 30px;
     box-shadow: 0 0 20px #dddddd;
     transition: 0.3s;
 }
 
-.news-list .news-item:hover{
+.news-list .news-item:hover {
     box-shadow: none;
 }
 
@@ -761,7 +966,7 @@ a {
     line-height: 1.7;
 }
 
-.news-info .btn-news{
+.news-info .btn-news {
     color: #051922;
     display: inline-block;
     font-size: 1.4rem;
@@ -769,42 +974,42 @@ a {
     padding: 16px 0;
 }
 
-.news-more{
+.news-more {
     margin-top: 80px;
     text-align: center;
 }
 
-.news-more .btn-news-desc{
+.news-more .btn-news-desc {
     min-width: 117px;
 }
 
 /* Brands */
-.brands{
+.brands {
     padding: 50px 0;
     background: #f5f5f5;
 }
 
-.list-brands .item{
+.list-brands .item {
     display: flex;
 }
 
-.list-brands .item img{
+.list-brands .item img {
     margin: auto;
 }
 
 /* Footer */
-.footer{
+.footer {
     background-color: #051922;
     color: #fff;
     padding: 100px 0;
 }
 
-.footer .body{
+.footer .body {
     display: flex;
     gap: 50px;
 }
 
-.widget-title{
+.widget-title {
     font-size: 2.4rem;
     font-weight: 500;
     position: relative;
@@ -813,7 +1018,7 @@ a {
     margin-bottom: 18px;
 }
 
-.widget-title::after{
+.widget-title::after {
     position: absolute;
     content: "";
     left: 0;
@@ -823,38 +1028,38 @@ a {
     background: var(--primary-color);
 }
 
-.footer .widget-about{
+.footer .widget-about {
     flex: 1;
 }
 
 
 .widget-git ul li,
-.footer .widget-about .desc{
+.footer .widget-about .desc {
     font-size: 1.4rem;
     color: #fff;
     opacity: 0.6;
     line-height: 1.8;
 }
 
-.footer .widget-git{
+.footer .widget-git {
     flex: 1;
 }
 
-.widget-git ul li{
+.widget-git ul li {
     margin-bottom: 10px;
 }
 
-.footer .widget-pages{
+.footer .widget-pages {
     flex: 1;
 }
 
-.footer .widget-pages ul li{
+.footer .widget-pages ul li {
     position: relative;
     padding-left: 20px;
     margin-bottom: 20px;
 }
 
-.widget-pages ul li::before{
+.widget-pages ul li::before {
     position: absolute;
     left: 0;
     top: 0;
@@ -864,22 +1069,22 @@ a {
     color: var(--primary-color);
 }
 
-.widget-pages ul li a{
+.widget-pages ul li a {
     font-size: 1.4rem;
     color: #fff;
     opacity: 0.6;
     transition: 0.3s;
 }
 
-.widget-pages ul li:hover a{
+.widget-pages ul li:hover a {
     opacity: 1;
 }
 
-.footer .widget-subscribe{
+.footer .widget-subscribe {
     flex: 1;
 }
 
-.footer .widget-subscribe .desc{
+.footer .widget-subscribe .desc {
     font-size: 1.4rem;
     color: #fff;
     opacity: 0.6;
@@ -887,7 +1092,7 @@ a {
     margin-bottom: 18px;
 }
 
-.footer .widget-subscribe form input[type=email]{
+.footer .widget-subscribe form input[type=email] {
     border: none;
     background-color: #012738;
     width: 78%;
@@ -898,7 +1103,7 @@ a {
     transition: 0.3s;
 }
 
-.footer .widget-subscribe form button{
+.footer .widget-subscribe form button {
     width: 20%;
     border: none;
     background-color: #012738;
@@ -910,24 +1115,24 @@ a {
     transition: 0.3s;
 }
 
-.footer .social{
+.footer .social {
     margin-top: 25px;
     display: flex;
     gap: 26px;
 }
 
-.footer .social li{
+.footer .social li {
     border: 1px solid #999999;
     padding: 8px;
     border-radius: 4px;
     transform: 0.3s;
 }
 
-.footer .social li a{
+.footer .social li a {
     color: #9ca3a6;
 }
 
 .footer .social li:hover,
-.footer .social li:hover a{
+.footer .social li:hover a {
     color: var(--primary-color);
 }
