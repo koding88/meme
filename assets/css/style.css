@@ -467,6 +467,79 @@ a {
     background-color: #051922;
 }
 
+/* Shop */
+.shop{
+    padding: 150px 0;
+}
+
+.shop .shop-filter{
+    margin-bottom: 80px;
+}
+
+.shop .shop-filter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.shop .shop-filter li{
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.8rem;
+    border: 2px solid #051922;
+    color: #323232;
+    cursor: pointer;
+    padding: 8px 20px;
+    border-radius: 25px;
+    transition: .3s linear;
+}
+
+.shop .shop-filter li.active{
+    border: 2px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.shop .shop-filter li:hover{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.shop .product-list{
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+.shop .pagination{
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+
+.shop .pagination li a{
+    color: #6f6f6f;
+    font-size: 1.5rem;
+    background-color: #f3f3f3;
+    display: inline-block;
+    padding: 16px 32px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: .3s linear;
+}
+
+.shop .pagination li a i{
+    margin: 0 6px;
+}
+
+.shop .pagination li:hover a{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
 /* Product */
 .product {
     padding: 150px 0;
