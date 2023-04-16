@@ -399,7 +399,7 @@ a {
 .team .body .desc{
     font-size: 1.5rem;
     width: 530px;
-    margin: 0 auto;
+    text-align: center;
     color: #555;
     margin-top: 10px;
     line-height: 1.8;
@@ -651,6 +651,87 @@ a {
 
 .product-list .info .btn-cart i{
     margin-right: 5px;
+}
+
+/* Product-detail */
+.product-detail{
+    padding-top: 150px;
+}
+
+.product-detail .body{
+    display: flex;
+}
+
+.product-detail .product-img .thumb{
+    width: 445px;
+    height: 445px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #ddd;
+}
+
+.product-info{
+    width: 70%;
+    margin-left: 50px;
+}
+
+.product-info .title{
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.product-info .quantity,
+.product-info .desc,
+.product-info .category{
+    display: block;
+    font-size: 1.5rem;
+    color: #555;
+    line-height: 1.8;
+    margin: 15px 0;
+}
+
+.product-info .price{
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #051922;
+    line-height: inherit;
+}
+
+.product-info .content-form form{
+    margin-bottom: 20px;
+}
+
+.product-info .content-form form input[type="number" i]{
+    padding: 10px 20px;
+}
+
+.product-info .btn-cart{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.product-info .btn-cart i{
+    margin-right: 6px;
+}
+
+.product-info h4{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 35px;
+}
+
+.product-info .social-share{
+    margin-top: 18px;
+    display: flex;
+    gap: 20px;
+}
+
+.product-info .social-share li a{
+    display: block;
+    color: #051922;
 }
 
 
