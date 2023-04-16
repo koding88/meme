@@ -1072,6 +1072,12 @@ a {
     overflow: hidden;
 }
 
+/* News article */
+.news.news-article .news-list{
+    overflow: inherit;
+    flex-wrap: wrap;
+}
+
 .news-list .news-item {
     flex-shrink: 0;
     width: calc(33.33% - 20px);
