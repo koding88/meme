@@ -392,7 +392,7 @@ a {
     bottom: 0px;
     width: 50px;
     height: 2px;
-    background-color: #F28123;
+    background-color: var(--primary-color);
     margin: 0 auto;
 }
 
@@ -780,7 +780,7 @@ a {
     margin-top: 8px;
     text-align: center;
     border-radius: 50%;
-    background-color: #F28123;
+    background-color: var(--primary-color);
 }
 
 .banner .inner-price .price {
@@ -1446,6 +1446,119 @@ table.order-details tbody td {
     padding: 15px 65px;
 }
 
+/* Contact */
+.contact{
+    padding: 150px 0;
+}
+
+.contact .body{
+    display: flex;
+    gap: 30px;
+}
+
+.contact .contact-left{
+    width: 70%;
+}
+
+.contact .form-title {
+    margin-bottom: 25px;
+}
+
+.contact .form-title h2 {
+    font-size: 2.5rem;
+}
+
+.contact .form-title p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+.contact .contact-form form p input[type=text], .contact-form form p input[type=tel], .contact-form form p input[type=email] {
+    width: 49%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin-bottom: 18px;
+}
+
+.contact .contact-form form p textarea {
+    border: 1px solid #ddd;
+    padding: 15px;
+    height: 200px;
+    border-radius: 3px;
+    width: 100%;
+    resize: none;
+}
+
+.contact .contact-form-right {
+    background-color: #FBFBFB;
+    padding: 45px 30px;
+    border-radius: 5px;
+}
+
+.contact .contact-form-right .contact-form-box {
+    padding-left: 40px;
+    margin-bottom: 30px;
+}
+
+.contact-form-right .contact-form-box h4 {
+    font-size: 2rem;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.contact-form-right .contact-form-box h4 i {
+    position: absolute;
+    left: -20%;
+    color: var(--primary-color);
+    top: 2px;
+}
+
+.contact-form-right .contact-form-box p {
+    line-height: 1.85;
+    font-size: 1.4rem;
+    opacity: 0.8;
+}
+
+.contact .btn-cart{
+    margin-top: 18px;
+    min-width: 108px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 15px 25px;
+    border: none;
+}
+
+/* Find-location */
+
+.find-location{
+    padding: 15px 0;
+    background-color: #162133;
+}
+
+.find-location .body{
+    display: flex;
+}
+
+.find-location p {
+    color: #fff;
+    font-size: 40px;
+    margin: auto;
+    font-weight: 600;
+    padding: 95px 0;
+}
+
+.find-location p i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+/* google-map */
+.google-map iframe{
+    width: 100%;
+}
+
 /* Footer */
 .footer {
     background-color: #051922;
@@ -1556,7 +1669,7 @@ table.order-details tbody td {
     width: 20%;
     border: none;
     background-color: #012738;
-    color: #F28123;
+    color: var(--primary-color);
     padding: 15px 0;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
